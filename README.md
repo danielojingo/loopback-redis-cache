@@ -45,7 +45,9 @@ loopback-redis-cache is currently extended with the following plugins.
 At your model (using config.json settings)
 ```
   "mixins": {
-     "Rediscache": {}      
+     "Rediscache": {
+       "ttl": 3600
+     }      
   }
 ```  
 At your model (using external redis server)
@@ -55,7 +57,8 @@ At your model (using external redis server)
        "client": {
          "host": "redis.server.ip.address",
          "password": "redis-password"
-       }
+       },
+      "ttl": 3600
      }    
   }
   ```
@@ -83,7 +86,3 @@ At your model (using external redis server)
     });
   ```
   
-### See also
------------------------
-Host your web site easily, instantly and FREE PHP, MySQL and free SSL One Click WordPress Installation!
-https://hostdrop.eu
